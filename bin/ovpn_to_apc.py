@@ -70,16 +70,16 @@ def convert_file():
         
         save_apc_file(apc_config, output_filepath)
         
-        messagebox.showinfo("Successo", f"File APC creato: {output_filepath}")
+        messagebox.showinfo("Success", f"File APC : {output_filepath}")
     
     except Exception as e:
-        messagebox.showerror("Errore", f"Errore durante la conversione: {str(e)}")
+        messagebox.showerror("Error", f"Conversion Error: {str(e)}")
 
 root = tk.Tk()
-root.title("Convertitore OVPN in APC")
+root.title("Converter OVPN -> APC")
 root.geometry("400x200")
 
-convert_button = tk.Button(root, text="Converti OVPN in APC", command=convert_file, width=30)
+convert_button = tk.Button(root, text="Convert OVPN -> APC", command=convert_file, width=30)
 convert_button.pack(pady=50)
 
 root.mainloop()
